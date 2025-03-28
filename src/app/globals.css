@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.hero-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-ul li {
+  margin-bottom: 21px !important;
+}
+.border-footer {
+  border-bottom: 1px solid #CFCFCF;
+}
+.typewriter-container {
+  width: fit-content;
+  margin: auto;
+  font-family: 'Noto Sans', sans-serif;
+  white-space: nowrap;
+  
+  padding-bottom:26px;
+}
+
+.blinking-cursor {
+  color: #F67F60 ;
+  display: inline-block;
+  width: 10px; /* Adjust width for the cursor */
+  animation: blink .5s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.popup-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+margin: 0!important;
+}
+a{
+  cursor: pointer;
+}
+p{
+
+  margin-bottom: 18px;
+}
+
+.section-main-heading{
+
+  font-family: DM Sans;
+font-size: 40px;
+font-weight: 700;
+line-height: 50.01px;
+
+
+}
+
+.custom-bullet p::before {
+  content: "";
+  background-image: url('./assests/Right\ Arrow.svg');
+  position: absolute;
+  left: -32px;
+  top: 0;
+  width: 25px; /* Updated width */
+  height: 25px; /* Updated height */
+}
+
+
+
+.custom-bullet p {
+  position: relative;
+  margin-left: 35px;
+}
